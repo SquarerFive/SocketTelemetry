@@ -9,6 +9,6 @@ public class SocketTelemetryTarget : TargetRules
 	{
 		Type = TargetType.Game;
 
-		ExtraModuleNames.AddRange( new string[] { "SocketTelemetry" } );
+		ExtraModuleNames.AddRange( new string[] { "SocketTelemetry", "SocketIOClient", "SIOJson", "SIOJson", "CoreUtility", "SIOJEditorPlugin" } );
 	}
 }

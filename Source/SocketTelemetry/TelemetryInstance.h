@@ -11,6 +11,12 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "SocketIOClientComponent.h"
+#include "Engine.h"
+#include "TelemetryHandler.h"
+#include "Blueprint/UserWidget.h"
+#include "Slate.h"
+
 #include "TelemetryInstance.generated.h"
 
 /**
@@ -42,10 +48,31 @@ struct FUserData										{
 
 
 UCLASS()
-class SOCKETTELEMETRY_API UTelemetryInstance : 
+class SOCKETTELEMETRY_API UTelemetryInstance			: 
 						public UGameInstance
 														{
+	UTelemetryInstance();
 	GENERATED_BODY()
+												     public:
+	UFUNCTION(BlueprintCallable) /* Connect to data server */
 		bool Connect(FString IP, int32 Port)			;
-
+	USocketIOClientComponent * SocketComponent			;
+	UFUNCTION(BlueprintNativeEvent)
+		/* Called after init. */
+		void GamePostInit()								;
+	virtual void Init() override						;
+	ATelemetryHandler * TelemetryHandlerActor			;
+	UFUNCTION()
+	virtual void OnLevelLoad(const FString&MapName)		;
+	UFUNCTION()
+	virtual void OnLevelFinishLoad(UWorld*InLoadedWorld);
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		TSubclassOf<class UUserWidget> refInitLoadWidget;
+	UPROPERTY()
+		UUserWidget * InitLoadWidget;
+	UFUNCTION()
+		void Internal_GamePostInit(UWorld * World);
+	UFUNCTION()
+		void PrintToScreen(FString Message, 
+			FColor Colour = FColor::Red);
 														};

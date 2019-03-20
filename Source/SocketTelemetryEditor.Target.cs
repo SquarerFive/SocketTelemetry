@@ -9,6 +9,6 @@ public class SocketTelemetryEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 
-		ExtraModuleNames.AddRange( new string[] { "SocketTelemetry" } );
+		ExtraModuleNames.AddRange( new string[] { "SocketTelemetry", "SocketIOClient", "SIOJson", "SIOJson", "CoreUtility", "SIOJEditorPlugin" } );
 	}
 }

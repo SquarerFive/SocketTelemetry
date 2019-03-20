@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SocketTelemetry-2145.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\SocketTelemetryEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\ClientConnection.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\SocketTelemetry.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryGameMode.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryHandler.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryInstance.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryUI.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\ClientConnection.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\SocketTelemetry.init.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryGameMode.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryHandler.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryInstance.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\TelemetryUI.gen.cpp.obj"
+"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\PCLaunch.rc.res"
+/OUT:"F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Development\SocketTelemetry\UE4Editor-SocketTelemetry-2145.lib"

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SocketTelemetry.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{86280B1B-6F1F-4D13-B8F1-B2B51EDFCFD8}</UniqueIdentifier>
+      <UniqueIdentifier>{1372E145-319D-4904-8631-6F06C4A51CE5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SocketTelemetry.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DFC0FD29-5416-4795-8F95-F601F91657C2}</UniqueIdentifier>
+      <UniqueIdentifier>{98737E60-7B5E-4975-9470-9D6BA1269B4D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\SocketTelemetry">
-      <UniqueIdentifier>{CC91AEE5-C877-4F32-81FB-523A0D143214}</UniqueIdentifier>
+      <UniqueIdentifier>{1FA5429B-CD91-4967-9229-08BE15BC512D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SocketTelemetry\ClientConnection.cpp">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SocketTelemetry\ClientConnection.h">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClInclude>
     <None Include="..\..\Source\SocketTelemetry\SocketTelemetry.Build.cs">
       <Filter>Source\SocketTelemetry</Filter>
     </None>
@@ -33,6 +39,12 @@
       <Filter>Source\SocketTelemetry</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\SocketTelemetry\SocketTelemetry.h">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SocketTelemetry\TelemetryHandler.cpp">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SocketTelemetry\TelemetryHandler.h">
       <Filter>Source\SocketTelemetry</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\SocketTelemetry\TelemetryInstance.cpp">
@@ -43,12 +55,18 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\SocketTelemetry\ClientConnection.h">
+    <ClInclude Include="..\..\Source\SocketTelemetry\TelemetryGameMode.h">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SocketTelemetry\TelemetryUI.h">
       <Filter>Source\SocketTelemetry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\SocketTelemetry\ClientConnection.cpp">
+    <ClCompile Include="..\..\Source\SocketTelemetry\TelemetryGameMode.cpp">
+      <Filter>Source\SocketTelemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SocketTelemetry\TelemetryUI.cpp">
       <Filter>Source\SocketTelemetry</Filter>
     </ClCompile>
   </ItemGroup>

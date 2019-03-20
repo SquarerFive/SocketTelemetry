@@ -415,6 +415,24 @@
 /I "F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Intermediate\Build\Win64\UE4Editor\Inc\SocketTelemetry"
 /I "F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Source"
 /I "F:\UE4 Stuff\Unreal Projects\Five_SocketClient\SocketTelemetry\Source\SocketTelemetry"
+/I ..\Plugins\Marketplace\SocketIOClient\Intermediate\Build\Win64\UE4Editor\Inc\SocketIOClient
+/I ..\Plugins\Marketplace\SocketIOClient\Source
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SocketIOClient\Public
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SocketIOClient
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\JsonUtilities
+/I Runtime\JsonUtilities\Public
+/I Runtime\JsonUtilities
+/I ..\Plugins\Marketplace\SocketIOClient\Intermediate\Build\Win64\UE4Editor\Inc\SIOJson
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SIOJson\Public
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SIOJson
+/I ..\Plugins\Marketplace\SocketIOClient\Intermediate\Build\Win64\UE4Editor\Inc\CoreUtility
+/I ..\Plugins\Marketplace\SocketIOClient\Source\CoreUtility\Public
+/I ..\Plugins\Marketplace\SocketIOClient\Source\CoreUtility
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SocketIOLib\Public
+/I ..\Plugins\Marketplace\SocketIOClient\Source\SocketIOLib
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\MoviePlayer
+/I Runtime\MoviePlayer\Public
+/I Runtime\MoviePlayer
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
