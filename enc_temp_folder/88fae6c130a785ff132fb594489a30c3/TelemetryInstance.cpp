@@ -16,22 +16,9 @@ void UTelemetryInstance::Init()
 	(this, &UTelemetryInstance::OnLevelLoad)					;
 	FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject
 	(this, &UTelemetryInstance::OnLevelFinishLoad)				;
-
-	FTimerDelegate EmptyTimeHandle;
-	while (!GetWorld()->IsValidLowLevel())
-	{
-
-	}
-	UWorld * World = GetWorld();
-	FVector Loc(0.f, 0.f, 0.f);
-	FRotator Rot(0.f, 0.f, 0.f);
-	FActorSpawnParameters SpawnParams;
-	TelemetryHandlerActor = World->SpawnActor<ATelemetryHandler>(Loc, Rot, SpawnParams);
 																}
 
-void UTelemetryInstance::Test() {
-	PrintToScreen("Delay works");
-}
+
 bool UTelemetryInstance::Connect(FString IP, int32 Port)
 																{
 	/* if (!SocketComponent->IsValidLowLevel()) { return false ;}
@@ -103,10 +90,9 @@ void UTelemetryInstance::Internal_GamePostInit(UWorld * World)  {
 	//if (!GEngine->GetWorld()->IsValidLowLevel()) return		;
 	GEngine->AddOnScreenDebugMessage(-1,
 		5.f, FColor::Green, TEXT("Post Init Success"))			;
-	TelemetryHandlerActor = World->SpawnActor<ATelemetryHandler>(Loc, Rot,SpawnParams);
-	if (!TelemetryHandlerActor) {
-
-	
+	TelemetryHandlerActor = World->
+		SpawnActor<ATelemetryHandler>
+		(Loc, Rot, SpawnParams)									;
 	for (TActorIterator<ATelemetryHandler>
 		ActorItr(World); ActorItr; ++ActorItr)
 																{
@@ -117,8 +103,6 @@ void UTelemetryInstance::Internal_GamePostInit(UWorld * World)  {
 			return												;
 																}
 																}
-																}
-
 	GamePostInit()												;
 	return														;
 																}

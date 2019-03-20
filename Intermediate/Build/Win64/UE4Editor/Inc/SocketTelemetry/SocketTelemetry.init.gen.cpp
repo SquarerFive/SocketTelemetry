@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeSocketTelemetry_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/SocketTelemetry",
 				PKG_CompiledIn | 0x00000000,
-				0x0817CD5D,
-				0x5A612175,
+				0xC07650F5,
+				0x3B12BB95,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -78,6 +78,4 @@ class SOCKETTELEMETRY_API UTelemetryInstance			:
 	UFUNCTION(BlueprintCallable)
 		void SetTelemetryHandlerActor
 		(ATelemetryHandler * TeleHandler)				;
-	UFUNCTION()
-		void Test();
 														};

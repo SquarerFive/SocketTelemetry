@@ -28,6 +28,7 @@ void EmptyLinkFunctionForGeneratedCodeTelemetryInstance() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 	SOCKETTELEMETRY_API UFunction* Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor();
 	SOCKETTELEMETRY_API UClass* Z_Construct_UClass_ATelemetryHandler_NoRegister();
+	SOCKETTELEMETRY_API UFunction* Z_Construct_UFunction_UTelemetryInstance_Test();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 // End Cross Module References
@@ -150,6 +151,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 			{ "OnLevelLoad", &UTelemetryInstance::execOnLevelLoad },
 			{ "PrintToScreen", &UTelemetryInstance::execPrintToScreen },
 			{ "SetTelemetryHandlerActor", &UTelemetryInstance::execSetTelemetryHandlerActor },
+			{ "Test", &UTelemetryInstance::execTest },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -394,6 +396,28 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UTelemetryInstance_Test_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTelemetryInstance_Test_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TelemetryInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTelemetryInstance_Test_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTelemetryInstance, "Test", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTelemetryInstance_Test_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTelemetryInstance_Test_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UTelemetryInstance_Test()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTelemetryInstance_Test_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UTelemetryInstance_NoRegister()
 	{
 		return UTelemetryInstance::StaticClass();
@@ -429,6 +453,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		{ &Z_Construct_UFunction_UTelemetryInstance_OnLevelLoad, "OnLevelLoad" }, // 982447555
 		{ &Z_Construct_UFunction_UTelemetryInstance_PrintToScreen, "PrintToScreen" }, // 550995089
 		{ &Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor, "SetTelemetryHandlerActor" }, // 1586239283
+		{ &Z_Construct_UFunction_UTelemetryInstance_Test, "Test" }, // 2637914369
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTelemetryInstance_Statics::Class_MetaDataParams[] = {
@@ -477,7 +502,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTelemetryInstance, 3084195410);
+	IMPLEMENT_CLASS(UTelemetryInstance, 3882068076);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTelemetryInstance(Z_Construct_UClass_UTelemetryInstance, &UTelemetryInstance::StaticClass, TEXT("/Script/SocketTelemetry"), TEXT("UTelemetryInstance"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTelemetryInstance);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

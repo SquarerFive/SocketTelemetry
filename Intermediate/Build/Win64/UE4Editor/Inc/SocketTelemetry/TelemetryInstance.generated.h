@@ -24,6 +24,14 @@ class UWorld;
 #define SocketTelemetry_Source_SocketTelemetry_TelemetryInstance_h_55_RPC_WRAPPERS \
 	virtual void GamePostInit_Implementation(); \
  \
+	DECLARE_FUNCTION(execTest) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Test(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetTelemetryHandlerActor) \
 	{ \
 		P_GET_OBJECT(ATelemetryHandler,Z_Param_TeleHandler); \
@@ -91,6 +99,14 @@ class UWorld;
 
 #define SocketTelemetry_Source_SocketTelemetry_TelemetryInstance_h_55_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void GamePostInit_Implementation(); \
+ \
+	DECLARE_FUNCTION(execTest) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Test(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execSetTelemetryHandlerActor) \
 	{ \
