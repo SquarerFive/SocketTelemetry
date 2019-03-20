@@ -8,7 +8,7 @@ public class SocketTelemetry : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SocketIOClient", "SocketIOLib", "Json", "SIOJson", "MoviePlayer", "UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SocketIOClient", "SocketIOLib", "Json", "SIOJson", "MoviePlayer", "UMG", "SocketIOLib" });
 
 
         PrivateDependencyModuleNames.AddRange(new string[] {  });

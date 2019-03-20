@@ -26,6 +26,8 @@ void EmptyLinkFunctionForGeneratedCodeTelemetryInstance() {}
 	SOCKETTELEMETRY_API UFunction* Z_Construct_UFunction_UTelemetryInstance_OnLevelLoad();
 	SOCKETTELEMETRY_API UFunction* Z_Construct_UFunction_UTelemetryInstance_PrintToScreen();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
+	SOCKETTELEMETRY_API UFunction* Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor();
+	SOCKETTELEMETRY_API UClass* Z_Construct_UClass_ATelemetryHandler_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 // End Cross Module References
@@ -147,6 +149,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 			{ "OnLevelFinishLoad", &UTelemetryInstance::execOnLevelFinishLoad },
 			{ "OnLevelLoad", &UTelemetryInstance::execOnLevelLoad },
 			{ "PrintToScreen", &UTelemetryInstance::execPrintToScreen },
+			{ "SetTelemetryHandlerActor", &UTelemetryInstance::execSetTelemetryHandlerActor },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -359,6 +362,38 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics
+	{
+		struct TelemetryInstance_eventSetTelemetryHandlerActor_Parms
+		{
+			ATelemetryHandler* TeleHandler;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TeleHandler;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::NewProp_TeleHandler = { UE4CodeGen_Private::EPropertyClass::Object, "TeleHandler", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000080, 1, nullptr, STRUCT_OFFSET(TelemetryInstance_eventSetTelemetryHandlerActor_Parms, TeleHandler), Z_Construct_UClass_ATelemetryHandler_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::NewProp_TeleHandler,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TelemetryInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTelemetryInstance, "SetTelemetryHandlerActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(TelemetryInstance_eventSetTelemetryHandlerActor_Parms), Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::PropPointers), 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UTelemetryInstance_NoRegister()
 	{
 		return UTelemetryInstance::StaticClass();
@@ -393,6 +428,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		{ &Z_Construct_UFunction_UTelemetryInstance_OnLevelFinishLoad, "OnLevelFinishLoad" }, // 3363522178
 		{ &Z_Construct_UFunction_UTelemetryInstance_OnLevelLoad, "OnLevelLoad" }, // 982447555
 		{ &Z_Construct_UFunction_UTelemetryInstance_PrintToScreen, "PrintToScreen" }, // 550995089
+		{ &Z_Construct_UFunction_UTelemetryInstance_SetTelemetryHandlerActor, "SetTelemetryHandlerActor" }, // 1586239283
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTelemetryInstance_Statics::Class_MetaDataParams[] = {
@@ -441,7 +477,7 @@ static struct FScriptStruct_SocketTelemetry_StaticRegisterNativesFUserData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTelemetryInstance, 2382361052);
+	IMPLEMENT_CLASS(UTelemetryInstance, 3084195410);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTelemetryInstance(Z_Construct_UClass_UTelemetryInstance, &UTelemetryInstance::StaticClass, TEXT("/Script/SocketTelemetry"), TEXT("UTelemetryInstance"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTelemetryInstance);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

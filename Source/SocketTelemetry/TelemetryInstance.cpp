@@ -72,7 +72,8 @@ OnLevelFinishLoad(UWorld*InLoadedWorld)							{
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Test"));
 
 	//GamePostInit()											;
-	UWorld * World = GEngine->GetWorldFromContextObject(GetPrimaryPlayerController());
+	UWorld * World = GEngine->GetWorldFromContextObject
+	(GetPrimaryPlayerController())								;
 
 	Internal_GamePostInit(World)								; // Call from GameMode.
 	PrintToScreen(World->GetName());
@@ -108,4 +109,12 @@ void UTelemetryInstance::Internal_GamePostInit(UWorld * World)  {
 void UTelemetryInstance::PrintToScreen(FString Message,FColor Colour)
 																{
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, Colour, Message);
+																}
+void UTelemetryInstance::SetTelemetryHandlerActor
+(ATelemetryHandler * TeleHandler)								{
+	if (!TeleHandler)
+	{
+		return;
+	}
+	TelemetryHandlerActor = TeleHandler							;
 																}

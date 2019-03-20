@@ -75,4 +75,7 @@ class SOCKETTELEMETRY_API UTelemetryInstance			:
 	UFUNCTION()
 		void PrintToScreen(FString Message, 
 			FColor Colour = FColor::Red);
+	UFUNCTION(BlueprintCallable)
+		void SetTelemetryHandlerActor
+		(ATelemetryHandler * TeleHandler)				;
 														};

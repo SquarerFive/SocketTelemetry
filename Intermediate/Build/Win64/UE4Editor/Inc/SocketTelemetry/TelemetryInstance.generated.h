@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ATelemetryHandler;
 struct FColor;
 class UWorld;
 #ifdef SOCKETTELEMETRY_TelemetryInstance_generated_h
@@ -22,6 +23,15 @@ class UWorld;
 
 #define SocketTelemetry_Source_SocketTelemetry_TelemetryInstance_h_55_RPC_WRAPPERS \
 	virtual void GamePostInit_Implementation(); \
+ \
+	DECLARE_FUNCTION(execSetTelemetryHandlerActor) \
+	{ \
+		P_GET_OBJECT(ATelemetryHandler,Z_Param_TeleHandler); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetTelemetryHandlerActor(Z_Param_TeleHandler); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execPrintToScreen) \
 	{ \
@@ -81,6 +91,15 @@ class UWorld;
 
 #define SocketTelemetry_Source_SocketTelemetry_TelemetryInstance_h_55_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void GamePostInit_Implementation(); \
+ \
+	DECLARE_FUNCTION(execSetTelemetryHandlerActor) \
+	{ \
+		P_GET_OBJECT(ATelemetryHandler,Z_Param_TeleHandler); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetTelemetryHandlerActor(Z_Param_TeleHandler); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execPrintToScreen) \
 	{ \
