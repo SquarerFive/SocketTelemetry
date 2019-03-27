@@ -16,3 +16,7 @@ Then open the code solution which should be generated.
 
 ## Usage:
 -->> Coming Soon <<--
+
+# Other:
+-------------
+If you are going to use this project, I'd recommend cloning it as there may be issues with building in different projects.
